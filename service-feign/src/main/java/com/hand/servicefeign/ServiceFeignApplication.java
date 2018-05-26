@@ -8,10 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.hand"})
 @ComponentScan("com.hand")//扫描注入
 public class ServiceFeignApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ServiceFeignApplication.class, args);
     }
