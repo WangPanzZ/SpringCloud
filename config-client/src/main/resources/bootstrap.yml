@@ -15,4 +15,13 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+      #uri: http://localhost:8888/
+      discovery:
+        #spring.cloud.config.discovery.enabled 是从配置中心读取文件。
+        enabled: true
+        #spring.cloud.config.discovery.serviceId 配置中心的servieId，即服务名。
+        serviceId: config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
